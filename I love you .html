@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You 100,000 Times</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            overflow-y: scroll;
+        }
+        .container {
+            text-align: center;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I Love You 100,000 Times</h1>
+        <div id="text"></div>
+    </div>
+    
+    <script>
+        const count = 100000;
+        const textDiv = document.getElementById("text");
+        let textContent = "";
+        
+        for (let i = 1; i <= count; i++) {
+            textContent += "I love you ";
+            if (i % 1000 === 0) {
+                textContent += "<br>";  // Add line breaks every 1000 occurrences for readability
+            }
+        }
+        
+        textDiv.innerHTML = textContent;
+    </script>
+</body>
+</html>
